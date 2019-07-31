@@ -5,7 +5,7 @@
  * @version   3.3.2
  *
  * jQuery methods library for yii2-grid expand row column
- * 
+ *
  * Author: Kartik Visweswaran
  * Copyright: 2014 - 2019, Kartik Visweswaran, Krajee.com
  * For more JQuery plugins visit http://plugins.krajee.com
@@ -115,9 +115,9 @@ var kvExpandRow;
             return;
         }
         $rows.each(function () {
-            var $el = $(this), $newRow, $tr, $icon = $el.find('>.kv-expand-icon'),
+            var $el = $(this), $newRow, $tr, $icon = $el.find('.kv-expand-icon:first'),
                 $cell = $icon.closest('.kv-expand-icon-cell'),
-                $row = $el.closest('tr'), $container = $cell.find('.kv-expand-detail'),
+                $row = $el.closest('tr'), $container = $cell.find('.kv-expand-detail:first'),
                 $detail = $el.find('.kv-expanded-row' + idCss + ':first'),
                 vKey = $detail.data('key'), vInd = $detail.data('index');
             if (!isExpanded($icon) && !isCollapsed($icon)) {
